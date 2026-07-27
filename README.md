@@ -243,3 +243,7 @@ Output: `backend/dist/SqlPlanVisualizer.exe`
 ## 📄 License
 
 MIT License — free to use, modify, and distribute.
+
+---
+
+Direct download link: https://github.com/DavidM94-stack/sql-visualization-webapp/releases/download/v1.0.0/SqlPlanVisualizer.exe
