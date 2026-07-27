@@ -1,0 +1,68 @@
+# ============================================================
+#  SQL Plan Visualizer — .gitignore
+# ============================================================
+
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+dist/  
+build/
+*.spec.bak
+
+# ── PyInstaller output ──────────────────────────────────────
+# Keep the .spec file but ignore compiled output
+backend/build/
+backend/dist/
+backend/*.spec.bak
+
+# ── Node / Frontend ─────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+.npm/
+*.tsbuildinfo
+
+# ── Environment & Secrets ───────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+secrets.json
+
+# ── IDE & Editor ────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+.DS_Store
+Thumbs.db
+
+# ── Logs & Temp ─────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.orig
+logs/
+tmp/
+temp/
+
+# ── Docker ──────────────────────────────────────────────────
+.docker/
+
+# ── OS ──────────────────────────────────────────────────────
+desktop.ini
+ehthumbs.db

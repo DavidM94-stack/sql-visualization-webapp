@@ -1,0 +1,41 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Aggregate",
+      "Strategy": "Plain",
+      "Partial Mode": "Simple",
+      "Startup Cost": 14250.00,
+      "Total Cost": 14250.01,
+      "Plan Rows": 1,
+      "Plan Width": 8,
+      "Actual Startup Time": 84.120,
+      "Actual Total Time": 84.123,
+      "Actual Rows": 1,
+      "Actual Loops": 1,
+      "Shared Hit Blocks": 12,
+      "Shared Read Blocks": 3150,
+      "Plans": [
+        {
+          "Node Type": "Seq Scan",
+          "Parent Relationship": "Outer",
+          "Relation Name": "orders",
+          "Alias": "orders",
+          "Startup Cost": 0.00,
+          "Total Cost": 13000.00,
+          "Plan Rows": 50000,
+          "Plan Width": 8,
+          "Actual Startup Time": 0.045,
+          "Actual Total Time": 79.450,
+          "Actual Rows": 52310,
+          "Actual Loops": 1,
+          "Shared Hit Blocks": 12,
+          "Shared Read Blocks": 3150,
+          "Filter": "(status = 'PENDING'::text)",
+          "Rows Removed by Filter": 447690
+        }
+      ]
+    },
+    "Planning Time": 0.150,
+    "Execution Time": 84.210
+  }
+]

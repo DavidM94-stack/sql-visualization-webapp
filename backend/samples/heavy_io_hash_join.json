@@ -1,0 +1,59 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Nested Loop",
+      "Join Type": "Inner",
+      "Startup Cost": 0.42,
+      "Total Cost": 84200.00,
+      "Plan Rows": 12000,
+      "Plan Width": 72,
+      "Actual Startup Time": 1.200,
+      "Actual Total Time": 380.500,
+      "Actual Rows": 11500,
+      "Actual Loops": 1,
+      "Shared Hit Blocks": 120,
+      "Shared Read Blocks": 8400,
+      "Plans": [
+        {
+          "Node Type": "Seq Scan",
+          "Parent Relationship": "Outer",
+          "Relation Name": "users",
+          "Alias": "u",
+          "Startup Cost": 0.00,
+          "Total Cost": 2200.00,
+          "Plan Rows": 1000,
+          "Plan Width": 36,
+          "Actual Startup Time": 0.050,
+          "Actual Total Time": 15.200,
+          "Actual Rows": 1000,
+          "Actual Loops": 1,
+          "Filter": "(status = 'VIP'::text)",
+          "Rows Removed by Filter": 99000,
+          "Shared Hit Blocks": 40,
+          "Shared Read Blocks": 400
+        },
+        {
+          "Node Type": "Index Scan",
+          "Parent Relationship": "Inner",
+          "Scan Direction": "Forward",
+          "Index Name": "idx_orders_user_id",
+          "Relation Name": "orders",
+          "Alias": "o",
+          "Startup Cost": 0.42,
+          "Total Cost": 81.50,
+          "Plan Rows": 12,
+          "Plan Width": 36,
+          "Actual Startup Time": 0.220,
+          "Actual Total Time": 0.350,
+          "Actual Rows": 11.5,
+          "Actual Loops": 1000,
+          "Index Cond": "(user_id = u.id)",
+          "Shared Hit Blocks": 80,
+          "Shared Read Blocks": 8000
+        }
+      ]
+    },
+    "Planning Time": 0.850,
+    "Execution Time": 382.100
+  }
+]
